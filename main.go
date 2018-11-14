@@ -45,7 +45,13 @@ func main() {
 }
 
 func openDb() *sql.DB {
-	dbinfo := "root:edwinharly@tcp(127.0.0.1:3306)/url_shortener"
+	//dbinfo := "root:edwinharly@tcp(127.0.0.1:3306)/url_shortener"
+	dbuser := os.Getenv("DBUSER")
+	dbpass := os.Getenv("DBPASS")
+	dbhost := os.Getenv("DBHOST")
+	schema := os.Getenv("SCHEMA")
+	dbinfo := dbuser + ":" + dbpass + "@tcp(" + dbhost + ":3306)/" + schema
+
 	db, err := sql.Open("mysql", dbinfo)
 	checkErr(err)
 	return db
