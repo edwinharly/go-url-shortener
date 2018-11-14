@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "8M/GlM986QSn9urcuFsQMvUFgSI=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "fd197cdcfae0c686792ef5399f223f5b66a30b6b",
+			"revisionTime": "2018-10-31T14:07:16Z"
+		},
+		{
+			"checksumSHA1": "ZQuUoNaE17SltnbJlqHhHizLbKU=",
+			"path": "github.com/teris-io/shortid",
+			"revision": "771a37caa5cf0c81f585d7b6df4dfc77e0615b5c",
+			"revisionTime": "2017-10-29T13:18:06Z"
+		}
+	],
+	"rootPath": "github.com/edwinharly/go-url-shortener"
+}
