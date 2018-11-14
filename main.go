@@ -9,6 +9,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 )
 
 var (
@@ -36,8 +37,10 @@ func main() {
 	http.HandleFunc("/register", register) // set router
 	http.HandleFunc("/new", shortener)
 
+	port := os.Getenv("PORT")
+
 	log.Fatal(
-		http.ListenAndServe(":9090", nil), // set listening port
+		http.ListenAndServe(":"+port, nil), // set listening port
 	)
 }
 
